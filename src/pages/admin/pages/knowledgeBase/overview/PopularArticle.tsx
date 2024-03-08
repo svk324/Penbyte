@@ -13,7 +13,7 @@ function PopularArticle () {
     <>
       <div className="pt-16 border-t border-normal dark:border-white/10">
         <h2 className="mb-[30px] text-dark dark:text-white/[.87] text-2xl font-semibold">Popular articles</h2>
-        <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 767: 2, 900: 3 }}>
+        {/* <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 767: 2, 900: 3 }}>
           <Masonry className="" gutter="15px">
             {articles.map((article, i) => (
               <div
@@ -36,7 +36,7 @@ function PopularArticle () {
               </div>
             ))}
           </Masonry>
-        </ResponsiveMasonry>
+        </ResponsiveMasonry> */}
       </div>
       <div className="pt-4 text-center">
         <h2 className="mb-3 font-semibold text-dark dark:text-white/[.87] text-[22px]">

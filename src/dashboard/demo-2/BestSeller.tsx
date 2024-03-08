@@ -40,21 +40,17 @@ const sellerColumns = [
   },
 ];
 
+interface PucSemester {
+  name: string;
+  link: string;
+  scode: string;
+  lastupdate: string;
+  author: string;
+}
+
 interface PucData {
-  semOne: Array<{
-    name: string;
-    link: string;
-    scode: string;
-    lastupdate: string;
-    author: string;
-  }>;
-  semTwo: Array<{
-    name: string;
-    link: string;
-    scode: string;
-    lastupdate: string;
-    author: string;
-  }>;
+  semOne: PucSemester[];
+  semTwo: PucSemester[];
 }
 
 const BestSeller = React.memo(() => {
@@ -84,12 +80,13 @@ const BestSeller = React.memo(() => {
   };
 
   useEffect(() => {
-    const selectedSemester = pucSemData[sellerTab];
-
+    // Use a type assertion to tell TypeScript that sellerTab is a valid key
+    const selectedSemester = (pucSemData as any)[sellerTab] as PucSemester[];
+  
     if (selectedSemester) {
       const updatedData = selectedSemester.map((subject) => {
         const { name, link, scode, lastupdate, author } = subject;
-
+  
         return {
           key: scode,
           name: (
@@ -111,8 +108,8 @@ const BestSeller = React.memo(() => {
       });
 
       setBestSellerData(updatedData);
-    }
-  }, [sellerTab, pucSemData]);
+  }
+}, [sellerTab, pucSemData]);
 
   return (
     <div className="h-full">

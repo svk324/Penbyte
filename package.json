@@ -5,7 +5,7 @@
   "engines": {
     "node": ">=16.8.0"
   },
-  "homepage": "",
+  "homepage": "../src/pages/",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -36,7 +36,7 @@
     "date-fns": "^3.3.1",
     "dayjs": "^1.11.9",
     "emoji-picker-react": "^4.4.11",
-    "eslint": "^8.48.0",
+    "eslint": "^8.57.0",
     "eslint-config-next": "13.4.19",
     "firebase": "^10.3.0",
     "i18next": "^23.4.6",

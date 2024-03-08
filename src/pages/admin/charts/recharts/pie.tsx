@@ -180,7 +180,7 @@ function ReChartPie() {
               </PieChart>
             </Cards>
           </Col>
-          <Col md={12} xs={24} className="mb-[25px]">
+          {/* <Col md={12} xs={24} className="mb-[25px]">
             <Cards className="ant-card-extra-none" title="CUSTOM ACTIVE SHAPE PIE CHART" size="large">
               <PieChart
                 width={responsive - (5 * responsive) / 100}
@@ -200,7 +200,7 @@ function ReChartPie() {
                 />
               </PieChart>
             </Cards>
-          </Col>
+          </Col> */}
           <Col md={12} xs={24} className="mb-[25px]">
             <Cards className="ant-card-extra-none" title="PIE CHART WITH CUSTOMIZED LABEL" size="large">
               <PieChart

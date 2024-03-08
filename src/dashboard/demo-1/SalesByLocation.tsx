@@ -286,7 +286,7 @@ const SaleByLocation = React.memo(() => {
                 anchorSelect="#hexadash-simple-map"
                 content={content}
               />
-              <ComposableMap
+              {/* <ComposableMaps
                 id="hexadash-simple-map"
                 className="w-full h-full"
                 data-tip=""
@@ -297,45 +297,7 @@ const SaleByLocation = React.memo(() => {
                 }}
                 viewBox="110, 50, 800, 350"
               >
-                <ZoomableGroup zoom={position.zoom} center={[position.coordinates[0], position.coordinates[1]]} onMoveEnd={handleMoveEnd}>
-                  <Geographies geography={geoUrl}>
-                    {({ geographies }) =>
-                      geographies.map((geo:Geo) => (
-                        <Geography
-                          key={geo.rsmKey}
-                          geography={geo}
-                          onMouseEnter={() => {
-                            const name = geo.properties.name;
-                            setContent(`${name}`);
-                          }}
-                          onMouseLeave={() => {
-                            setContent('');
-                          }}
-                          fill="#DBE1E8"
-                          stroke="#FFF"
-                          strokeWidth={0.4}
-                          style={{
-                            default: {
-                              fill: '#DBE1E8',
-                              outline: 'none',
-                            },
-                            hover: {
-                              fill: '#8231D3',
-                              outline: 'none',
-                              fillOpacity: 1,
-                            },
-                            pressed: {
-                              fill: '#8231D3',
-                              outline: 'none',
-                            }
-                            
-                          }}
-                        />
-                      ))
-                    }
-                  </Geographies>
-                </ZoomableGroup>
-              </ComposableMap>
+              </ComposableMap> */}
               <div className="absolute flex flex-col items-center right-5 bottom-5">
                 <button
                   type="button"

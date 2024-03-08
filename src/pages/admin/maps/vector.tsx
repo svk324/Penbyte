@@ -67,7 +67,7 @@ function VectorMaps() {
                     }}
                     viewBox={`20, ${window.innerWidth <= 479 ? 20 : 150}, 800, ${window.innerWidth <= 479 ? 500 : 320}`}
                   >
-                    <ZoomableGroup 
+                    {/* <ZoomableGroup 
                       zoom={position.zoom} 
                       // center={position.coordinates} 
                       onMoveEnd={handleMoveEnd}
@@ -106,7 +106,7 @@ function VectorMaps() {
                           ))
                         }
                       </Geographies>
-                    </ZoomableGroup>
+                    </ZoomableGroup> */}
                   </ComposableMap>
                   <div className="flex items-center flex-col absolute ltr:right-5 rtl:left-5 bottom-5">
                     <button
